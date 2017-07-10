@@ -14,19 +14,22 @@ protocol APPersonsDisplayManagerItem: NSObjectProtocol {
 }
 
 protocol APPersonsDisplayManagerDelegate: NSObjectProtocol {
-    func displayManager(manager: APPersonsDisplayManagerProtocol, didTapItem: APPersonsDisplayManagerItem)
+    func displayManager(manager: APPersonsDisplayManagerProtocol, didTapItem: APPersonsDisplayManagerProtocol.Model)
 }
 
 protocol APPersonsDisplayManagerProtocol: NSObjectProtocol, UITableViewDelegate, UITableViewDataSource {
+    
+    typealias Model = APPersonsDisplayManagerItem
+    
     weak var delegate: APPersonsDisplayManagerDelegate? { get set }
     weak var tableView: UITableView? { get set }
     
-    var items: [APPersonsDisplayManagerItem] { get }
-    func config(items: [APPersonsDisplayManagerItem])
+    var items: [Model] { get }
+    func config(items: [Model])
     
     func reloadData()
 
-    func insertElement(item: APPersonsDisplayManagerItem, index: Int, animation: UITableViewRowAnimation)
+    func insertElement(item: Model, index: Int, animation: UITableViewRowAnimation)
     func deleteElement(index: Int, animation: UITableViewRowAnimation)
     func reloadElement(index: Int, animation: UITableViewRowAnimation)
     func moveElement(fromIndex: Int, toIndex: Int, animation: UITableViewRowAnimation)

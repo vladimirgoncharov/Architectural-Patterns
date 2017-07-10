@@ -56,3 +56,16 @@ extension NSObject: XibSupport {
         throw XibSupportError.viewInNibNotFound
     }
 }
+
+//MARK: - RawRepresentable as Int
+extension RawRepresentable where Self.RawValue == Int {
+    
+    static func allCases(_ startIndex: Int = 0) -> [Self] {
+        var i = startIndex
+        return Array( AnyIterator {
+            let instance = self.init(rawValue: i)
+            i += 1
+            return instance
+        })
+    }
+}

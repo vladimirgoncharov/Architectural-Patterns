@@ -9,22 +9,43 @@
 import UIKit
 
 class APPersonsDisplayManager: NSObject, APPersonsDisplayManagerProtocol {
+    
+    enum Cells: Int {
+        case personCell
+        
+        var type: NSObject.Type {
+            switch self {
+            case .personCell: return APPersonTableViewCell.self
+            }
+        }
+        
+        var identifier: String {
+            return self.type.className
+        }
+        
+        var nib: UINib {
+            return self.type.getNib()
+        }
+    }
 
+    //MARK: -
     weak var delegate: APPersonsDisplayManagerDelegate?
     weak var tableView: UITableView? {
         didSet {
             if let tableView = self.tableView {
                 tableView.delegate = self
                 tableView.dataSource = self
-                tableView.register(APPersonTableViewCell.getNib(), forCellReuseIdentifier: APPersonTableViewCell.className)
+                Cells.allCases().forEach({ (cell) in
+                    tableView.register(cell.nib, forCellReuseIdentifier: cell.identifier)
+                })
                 self.reloadData()
             }
         }
     }
-    private(set) var items: [APPersonsDisplayManagerItem] = []
+    private(set) var items: [APPersonsDisplayManagerProtocol.Model] = []
     
     //MARK: - APPersonsDisplayManagerProtocol
-    func config(items: [APPersonsDisplayManagerItem]) {
+    func config(items: [APPersonsDisplayManagerProtocol.Model]) {
         self.items = items
         self.reloadData()
     }
@@ -33,7 +54,7 @@ class APPersonsDisplayManager: NSObject, APPersonsDisplayManagerProtocol {
         self.tableView?.reloadData()
     }
     
-    func insertElement(item: APPersonsDisplayManagerItem, index: Int, animation: UITableViewRowAnimation) {
+    func insertElement(item: APPersonsDisplayManagerProtocol.Model, index: Int, animation: UITableViewRowAnimation) {
         self.items.insert(item, at: index)
         self.tableView?.insertRows(at: [IndexPath(row: index, section: 0)],
                                    with: animation)
@@ -75,7 +96,7 @@ class APPersonsDisplayManager: NSObject, APPersonsDisplayManagerProtocol {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let item = self.items[indexPath.row]
-        let cell = tableView.dequeueReusableCell(withIdentifier: APPersonTableViewCell.className, for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: Cells.personCell.identifier, for: indexPath) as! APPersonTableViewCell
         cell.textLabel?.text = item.leftText
         cell.detailTextLabel?.text = item.rigthText
         return cell
