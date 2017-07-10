@@ -122,7 +122,7 @@
 		E7D75C4B1F12674E00FC2A0F = {
 			isa = PBXGroup;
 			children = (
-				E7D75CBB1F12699900FC2A0F /* Cocoa MVC */,
+				E7D75CBB1F12699900FC2A0F /* CocoaMVC */,
 				E7D75C551F12674E00FC2A0F /* Products */,
 				FB500F8F9CFA4104EFC427FE /* Pods */,
 				58562038DBD9548BF58CD00F /* Frameworks */,
@@ -174,14 +174,14 @@
 			path = CocoaMVCUITests;
 			sourceTree = "<group>";
 		};
-		E7D75CBB1F12699900FC2A0F /* Cocoa MVC */ = {
+		E7D75CBB1F12699900FC2A0F /* CocoaMVC */ = {
 			isa = PBXGroup;
 			children = (
 				E7D75C8C1F12678000FC2A0F /* Sources */,
 				E7D75CA31F12678100FC2A0F /* CocoaMVCTests */,
 				E7D75CAE1F12678100FC2A0F /* CocoaMVCUITests */,
 			);
-			name = "Cocoa MVC";
+			name = CocoaMVC;
 			sourceTree = "<group>";
 		};
 		E7D75CBC1F126E0B00FC2A0F /* Resources */ = {
@@ -197,8 +197,8 @@
 		E7D75CBD1F126E1D00FC2A0F /* PresentationLayer */ = {
 			isa = PBXGroup;
 			children = (
-				E7D75CC11F1273BF00FC2A0F /* Persons Controller */,
-				E7D75CD01F1283D800FC2A0F /* Person Controller */,
+				E7D75CC11F1273BF00FC2A0F /* Persons */,
+				E7D75CD01F1283D800FC2A0F /* Person */,
 			);
 			name = PresentationLayer;
 			sourceTree = "<group>";
@@ -219,13 +219,13 @@
 			name = Models;
 			sourceTree = "<group>";
 		};
-		E7D75CC11F1273BF00FC2A0F /* Persons Controller */ = {
+		E7D75CC11F1273BF00FC2A0F /* Persons */ = {
 			isa = PBXGroup;
 			children = (
 				E7D75CDB1F12884F00FC2A0F /* Display Manager */,
 				E7D75CC41F12747500FC2A0F /* APPersonsViewController.swift */,
 			);
-			name = "Persons Controller";
+			name = Persons;
 			sourceTree = "<group>";
 		};
 		E7D75CCE1F12802A00FC2A0F /* Views */ = {
@@ -245,12 +245,12 @@
 			name = Helpers;
 			sourceTree = "<group>";
 		};
-		E7D75CD01F1283D800FC2A0F /* Person Controller */ = {
+		E7D75CD01F1283D800FC2A0F /* Person */ = {
 			isa = PBXGroup;
 			children = (
 				E7D75CD21F12842300FC2A0F /* APPersonViewController.swift */,
 			);
-			name = "Person Controller";
+			name = Person;
 			sourceTree = "<group>";
 		};
 		E7D75CDB1F12884F00FC2A0F /* Display Manager */ = {
@@ -262,18 +262,18 @@
 			name = "Display Manager";
 			sourceTree = "<group>";
 		};
-		E7D75CE21F12D9EC00FC2A0F /* Persons Tests */ = {
+		E7D75CE21F12D9EC00FC2A0F /* Persons */ = {
 			isa = PBXGroup;
 			children = (
 				E7D75CEA1F136F4400FC2A0F /* APPersonsViewControllerTests.swift */,
 			);
-			name = "Persons Tests";
+			name = Persons;
 			sourceTree = "<group>";
 		};
 		E7D75CEE1F13781300FC2A0F /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				E7D75CE21F12D9EC00FC2A0F /* Persons Tests */,
+				E7D75CE21F12D9EC00FC2A0F /* Persons */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
