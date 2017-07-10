@@ -1,0 +1,21 @@
+# Template information section
+name: "mvc_controller"
+summary: "MVC module template with UIViewController"
+author: "Vladimir Goncharov"
+version: "1.0"
+license: "MIT"
+
+# The declarations for code files
+code_files:
+# Controller
+- {name: ViewController.swift, path: Code/controller.swift.liquid}
+
+# The declarations for test files
+test_files:
+# Controller tests
+- {name: ViewControllerTests.swift, path: Tests/controller_tests.swift.liquid}
+
+# Template dependencies
+dependencies:
+- Swinject
+- SwinjectStoryboard

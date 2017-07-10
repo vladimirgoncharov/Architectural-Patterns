@@ -35,3 +35,4 @@ catalogs:
 - 'https://github.com/vladimirgoncharov/generamba-catalog'
 templates:
 - {name: mvc_tablecontroller}
+- {name: mvc_controller}
