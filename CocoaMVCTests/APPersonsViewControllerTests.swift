@@ -45,6 +45,13 @@ class APPersonsViewControllerTests: XCTestCase {
     }
     
     //MARK: - Tests
+    func testDetailSegue() {
+        self.instance.displayManager.tableView?.selectRow(at: IndexPath(row: 0, section: 0),
+                                                          animated: true,
+                                                          scrollPosition: UITableViewScrollPosition.none)
+        self.instance.perfromDetailSegue()
+    }
+    
     func testDisplayManager() {
         var itemsCount = self.instance.displayManager.items.count
         var tableElementsCount = self.instance.displayManager.tableView!.numberOfRows(inSection: 0)
