@@ -29,9 +29,7 @@ class APPersonViewController: UIViewController {
         }
     }
     
-    //MARK: - init, config and deinit
-    class func registerDepedency() {}
-    
+    //MARK: - init, config and deinit    
     func config(model: Model) {
         self.model = model
     }
@@ -86,7 +84,7 @@ class APPersonViewController: UIViewController {
     }
 }
 
-//MARK: - updating the view
+//MARK: - Updating the view
 extension APPersonViewController {
     
     func configureView() {
@@ -97,4 +95,13 @@ extension APPersonViewController {
     func updatePoints() {
         self.detailDescriptionLabel?.text = "\(self.model?.points ?? 0)"
     }
+}
+
+//MARK: - Routing
+extension APPersonViewController {
+}
+
+//MARK: - Depedency
+extension APPersonViewController {
+    class func registerDepedency() {}
 }
