@@ -56,6 +56,8 @@
 		6E0D3AFA2C92DA0F553F8890 /* Pods-CocoaMVCTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CocoaMVCTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CocoaMVCTests/Pods-CocoaMVCTests.debug.xcconfig"; sourceTree = "<group>"; };
 		8DE54E7FE68B031EC7FA46F0 /* Pods_CocoaMVC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CocoaMVC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7B34A29407DFAD5843B92EC /* Pods-CocoaMVC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CocoaMVC.release.xcconfig"; path = "Pods/Target Support Files/Pods-CocoaMVC/Pods-CocoaMVC.release.xcconfig"; sourceTree = "<group>"; };
+		E7B64D5B1F140B6E00901E4B /* TO BE.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TO BE.png"; sourceTree = "<group>"; };
+		E7B64D5D1F140B7400901E4B /* AS IS.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AS IS.png"; sourceTree = "<group>"; };
 		E7D75C8B1F12678000FC2A0F /* CocoaMVC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CocoaMVC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7D75C8D1F12678000FC2A0F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E7D75C941F12678000FC2A0F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -177,6 +179,8 @@
 		E7D75CBB1F12699900FC2A0F /* CocoaMVC */ = {
 			isa = PBXGroup;
 			children = (
+				E7B64D5B1F140B6E00901E4B /* TO BE.png */,
+				E7B64D5D1F140B7400901E4B /* AS IS.png */,
 				E7D75C8C1F12678000FC2A0F /* Sources */,
 				E7D75CA31F12678100FC2A0F /* CocoaMVCTests */,
 				E7D75CAE1F12678100FC2A0F /* CocoaMVCUITests */,
